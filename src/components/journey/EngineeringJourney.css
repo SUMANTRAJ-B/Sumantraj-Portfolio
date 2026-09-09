@@ -1,0 +1,157 @@
+.journey-section {
+  position: relative;
+  padding: var(--space-20) var(--container-pad);
+  border-top: 1px solid var(--border-hairline);
+  background: var(--bg-void);
+}
+
+.journey-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.journey-timeline {
+  position: relative;
+  padding-left: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.timeline-axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-cyan) 0%,
+    rgba(0, 240, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.timeline-node {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.node-marker {
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 7px);
+  top: 18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg-void);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.node-marker-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.timeline-node.is-proven .node-marker {
+  border-color: var(--accent-cyan);
+}
+
+.timeline-node.is-proven .node-marker-dot {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+}
+
+.timeline-node.is-exploration .node-marker {
+  border-color: var(--status-caution);
+}
+
+.timeline-node.is-exploration .node-marker-dot {
+  background: var(--status-caution);
+  box-shadow: 0 0 6px var(--status-caution);
+}
+
+.node-content {
+  flex: 1;
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.node-content:hover {
+  border-color: var(--border-subtle);
+  transform: translateX(4px);
+}
+
+.timeline-node.is-exploration .node-content {
+  border-left: 2px solid var(--status-caution);
+}
+
+.timeline-node.is-proven .node-content {
+  border-left: 2px solid var(--accent-cyan);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.node-index {
+  color: var(--text-dim);
+}
+
+.node-badge {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.badge-proven {
+  background: rgba(0, 240, 255, 0.08);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.badge-exploration {
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--status-caution);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.node-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.node-summary {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .journey-timeline {
+    padding-left: var(--space-6);
+  }
+  .timeline-axis {
+    left: 7px;
+  }
+  .node-marker {
+    left: calc(-1 * var(--space-6) + 3px);
+  }
+}

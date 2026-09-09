@@ -1,0 +1,152 @@
+.sketch-contact-section {
+  padding: 6rem 0 4rem;
+  border-top: 1.5px solid var(--sketch-ink);
+  background-color: var(--sketch-bg);
+}
+
+.sketch-contact-main {
+  padding: 2rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sketch-contact-heading {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(2.5rem, 6.5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--sketch-ink);
+  margin: 0.5rem 0 3rem;
+}
+
+.email-sketch-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.sketch-email-link {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(1.35rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--sketch-blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 150ms ease;
+  word-break: break-all;
+}
+
+.sketch-email-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Resume Sketch Box */
+.resume-sketch-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 2rem;
+  background: rgba(240, 235, 222, 0.4);
+  border: 1.5px dashed var(--sketch-ink);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.sketch-contact-resume-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sketch-contact-profiles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1.25px dashed var(--sketch-ink-faint);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-links-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sketch-contact-social {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.85rem;
+  color: var(--sketch-ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.sketch-contact-social:hover {
+  color: var(--sketch-blue);
+  text-decoration: underline;
+}
+
+.social-divider {
+  color: var(--sketch-ink-faint);
+}
+
+.sketch-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1.5px solid var(--sketch-ink);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-signature {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sig-name {
+  font-family: var(--font-sketch-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sketch-ink);
+}
+
+.sig-role {
+  color: var(--sketch-ink-muted);
+}
+
+.sketch-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--sketch-ink);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.sketch-back-to-top:hover {
+  color: var(--sketch-blue);
+}
+
+@media (max-width: 768px) {
+  .sketch-contact-profiles {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

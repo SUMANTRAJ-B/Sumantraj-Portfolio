@@ -1,0 +1,53 @@
+.current-portfolio-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle Version 2 Switcher */
+.version-switch-banner {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.version-switch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 0.8rem;
+  background: rgba(13, 13, 17, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line-hairline);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.version-switch-link:hover {
+  background: var(--bg-elevated);
+  border-color: var(--accent-cyan-border);
+  color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+.switch-tag {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.switch-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.version-switch-link:hover .switch-arrow {
+  transform: translate(2px, -2px);
+}

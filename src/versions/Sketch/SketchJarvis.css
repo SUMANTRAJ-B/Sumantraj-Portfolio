@@ -1,0 +1,146 @@
+.sketch-jarvis-section {
+  padding: 6rem 0;
+  border-top: 1.5px solid var(--sketch-ink);
+  background-color: var(--sketch-bg);
+}
+
+.jarvis-blueprint-box {
+  padding: 3rem;
+  background-color: var(--sketch-card-bg);
+  border: 1.5px solid var(--sketch-ink);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 4px 4px 0px var(--sketch-ink);
+}
+
+.jarvis-blueprint-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.jarvis-blueprint-title {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--sketch-ink);
+  margin-top: 0.35rem;
+}
+
+.jarvis-blueprint-sub {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.95rem;
+  color: var(--sketch-blue);
+  margin-top: 0.25rem;
+}
+
+.jarvis-quote-banner {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(240, 235, 222, 0.5);
+  border-left: 3px solid var(--sketch-red);
+  margin-bottom: 2.5rem;
+}
+
+.hand-quote-symbol {
+  font-family: var(--font-sketch-display);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--sketch-red);
+}
+
+.jarvis-hand-quote {
+  font-family: var(--font-sketch-hand);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  color: var(--sketch-ink);
+  line-height: 1.35;
+}
+
+.jarvis-content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.jarvis-diagram-wrap {
+  margin: 1rem 0;
+  border: 1.25px dashed var(--sketch-ink-faint);
+  border-radius: 4px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.jarvis-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.jarvis-hand-annotation {
+  margin-top: 0.75rem;
+}
+
+.jarvis-concept-para {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--sketch-ink);
+  margin-bottom: 1.5rem;
+}
+
+.jarvis-focus-points {
+  margin-bottom: 2rem;
+}
+
+.jarvis-list {
+  list-style: none;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.jarvis-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--sketch-ink-muted);
+}
+
+.item-bullet {
+  color: var(--sketch-blue);
+  font-weight: bold;
+}
+
+.jarvis-grounding-box {
+  padding: 1rem 1.25rem;
+  background: rgba(220, 215, 200, 0.35);
+  border: 1px dashed var(--sketch-ink);
+  border-radius: 3px;
+}
+
+.grounding-text {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .jarvis-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .jarvis-blueprint-box {
+    padding: 2rem 1.25rem;
+  }
+}

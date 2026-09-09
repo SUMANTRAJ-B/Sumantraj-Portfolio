@@ -1,0 +1,16 @@
+.portfolio-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.portfolio-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}

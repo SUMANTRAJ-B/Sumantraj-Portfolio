@@ -1,0 +1,92 @@
+.editorial-jarvis-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.jarvis-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--line-hairline);
+  margin-bottom: var(--space-12);
+}
+
+.jarvis-status-tag {
+  color: var(--accent-cyan);
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--accent-cyan-border);
+  background: var(--accent-cyan-dim);
+}
+
+.jarvis-content-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.jarvis-title-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.jarvis-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-white);
+}
+
+.jarvis-intro-statement {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-weight: 450;
+  border-left: 2px solid var(--line-contrast);
+  padding-left: var(--space-4);
+}
+
+.jarvis-body-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.jarvis-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.jarvis-focus-strip {
+  padding: var(--space-6);
+  background: var(--bg-subtle);
+  border: 1px solid var(--line-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.focus-label {
+  color: var(--accent-cyan);
+}
+
+.focus-detail {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+@media (max-width: 860px) {
+  .jarvis-content-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

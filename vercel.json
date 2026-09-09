@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "/assets/resume.pdf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Sumantraj_B_Resume.pdf\""
+        }
+      ]
+    }
+  ]
+}

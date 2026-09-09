@@ -1,0 +1,318 @@
+.work-editorial-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.case-studies-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.editorial-case-study {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-20);
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.editorial-case-study:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Topline */
+.case-study-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.case-study-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-dim);
+  line-height: 1;
+}
+
+.case-study-domain {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.case-study-domain:hover {
+  color: var(--accent-cyan);
+}
+
+/* Heading & Summary */
+.case-study-heading {
+  margin-bottom: var(--space-10);
+  max-width: 960px;
+}
+
+.case-study-title {
+  font-size: clamp(1.85rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text-white);
+  margin-bottom: var(--space-4);
+}
+
+.case-study-summary {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Visual Area (Simulated Pipeline) */
+.case-study-visual-area {
+  background: var(--bg-subtle);
+  border: 1px solid var(--line-hairline);
+  padding: var(--space-8);
+  margin-bottom: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: relative;
+}
+
+.visual-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--line-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.scenario-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.scenario-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line-hairline);
+  background: transparent;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.scenario-pill:hover {
+  color: var(--text-white);
+  border-color: var(--line-subtle);
+}
+
+.scenario-pill.is-active {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan-border);
+  background: var(--accent-cyan-dim);
+}
+
+/* Pipeline Stages Flow */
+.editorial-pipeline-stages {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-3);
+  overflow-x: auto;
+  padding: var(--space-2) 0;
+}
+
+.stage-block {
+  flex: 1;
+  min-width: 170px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--line-hairline);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.stage-tag {
+  color: var(--text-dim);
+}
+
+.stage-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.stage-detail {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.stage-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  padding: 0 var(--space-1);
+}
+
+.stage-result {
+  min-width: 220px;
+}
+
+.stage-result.tier-normal {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.02);
+}
+
+.stage-result.tier-normal .decision-text {
+  color: #10b981;
+}
+
+.stage-result.tier-caution {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.02);
+}
+
+.stage-result.tier-caution .decision-text {
+  color: #f59e0b;
+}
+
+.stage-result.tier-danger {
+  border-color: rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.stage-result.tier-danger .decision-text {
+  color: #ef4444;
+}
+
+.decision-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+/* Confidence Distribution in Vehicle Case Study */
+.confidence-bars-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: var(--space-2);
+}
+
+.conf-mini-row {
+  display: grid;
+  grid-template-columns: 65px 1fr 38px;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+}
+
+.conf-mini-row.is-top {
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+.conf-mini-row.is-top .conf-label {
+  color: var(--accent-cyan);
+}
+
+.conf-track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.conf-bar {
+  height: 100%;
+  background: var(--text-dim);
+  transition: width 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.conf-mini-row.is-top .conf-bar {
+  background: var(--accent-cyan);
+}
+
+.visual-notice {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--line-hairline);
+}
+
+/* Case Study Footer */
+.case-study-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  padding-top: var(--space-4);
+}
+
+.footer-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-meta-label {
+  color: var(--text-muted);
+}
+
+.footer-meta-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.footer-action-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-case-study {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-case-study:hover {
+  background-color: var(--text-white);
+  color: var(--bg-black);
+}
+
+@media (max-width: 960px) {
+  .case-study-footer {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .footer-action-col {
+    justify-content: flex-start;
+  }
+}

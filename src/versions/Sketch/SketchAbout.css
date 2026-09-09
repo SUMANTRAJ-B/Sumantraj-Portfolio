@@ -1,0 +1,139 @@
+.sketch-about-section {
+  padding: 6rem 0;
+  border-top: 1.5px solid var(--sketch-ink);
+  background-color: var(--sketch-bg);
+}
+
+.sketch-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1.25px dashed var(--sketch-ink);
+  margin-bottom: 3.5rem;
+}
+
+.sketch-statement-box {
+  max-width: 980px;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sketch-about-statement {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--sketch-ink);
+}
+
+.hand-side-annotation {
+  margin-top: 1rem;
+  transform: rotate(-1deg);
+}
+
+.sketch-about-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about-sketch-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 18px;
+  background: rgba(220, 215, 200, 0.6);
+  border: 1px solid rgba(150, 140, 120, 0.4);
+  border-radius: 1px;
+}
+
+.card-heading {
+  font-family: var(--font-sketch-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--sketch-ink);
+  margin-top: 0.5rem;
+}
+
+.card-sub {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.8rem;
+  color: var(--sketch-blue);
+  margin-top: 0.2rem;
+}
+
+.card-school-name {
+  font-family: var(--font-sketch-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--sketch-ink);
+  margin-top: 0.3rem;
+}
+
+.divider-doodle {
+  margin: 1.25rem 0;
+}
+
+.sketch-check-list,
+.sketch-interests-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.sketch-check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sketch-mono);
+  font-size: 0.9rem;
+}
+
+.check-box {
+  color: var(--sketch-blue);
+  font-weight: 700;
+}
+
+.sketch-interest-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--sketch-ink);
+}
+
+.bullet-dash {
+  color: var(--sketch-red);
+  font-family: var(--font-sketch-mono);
+}
+
+.hand-interest-tag {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--sketch-ink-faint);
+}
+
+.sketch-philosophy-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--sketch-ink-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 860px) {
+  .sketch-about-columns {
+    grid-template-columns: 1fr;
+  }
+}

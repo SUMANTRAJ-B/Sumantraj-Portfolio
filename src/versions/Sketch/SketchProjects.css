@@ -1,0 +1,300 @@
+.sketch-projects-section {
+  padding: 6rem 0;
+  border-top: 1.5px solid var(--sketch-ink);
+  background-color: var(--sketch-bg);
+}
+
+.sketch-work-title-wrap {
+  margin-bottom: 3.5rem;
+}
+
+.sketch-work-title {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--sketch-ink);
+  margin-bottom: 0.5rem;
+}
+
+.sketch-work-sub {
+  font-size: 1.1rem;
+  color: var(--sketch-ink-muted);
+  max-width: 650px;
+}
+
+.sketch-project-study {
+  display: flex;
+  flex-direction: column;
+}
+
+.study-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.study-giant-num {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--sketch-ink);
+  line-height: 1;
+}
+
+.study-top-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sketch-study-link {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.8rem;
+  color: var(--sketch-ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sketch-study-link:hover {
+  color: var(--sketch-blue);
+  text-decoration: underline;
+}
+
+.study-title {
+  font-family: var(--font-sketch-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--sketch-ink);
+  margin-bottom: 0.75rem;
+}
+
+.study-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--sketch-ink-muted);
+  max-width: 820px;
+  margin-bottom: 2.5rem;
+}
+
+/* Hand-Drawn Flowchart Canvas */
+.hand-diagram-canvas {
+  background: var(--sketch-bg-paper);
+  border: 1.5px solid var(--sketch-ink);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.diagram-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1.25px dashed var(--sketch-ink);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scenario-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sketch-pill-btn {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.65rem;
+  background: #ffffff;
+  border: 1.25px solid var(--sketch-ink);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  cursor: pointer;
+  color: var(--sketch-ink);
+  transition: all 150ms ease;
+}
+
+.sketch-pill-btn:hover {
+  background: var(--sketch-ink);
+  color: #ffffff;
+}
+
+.sketch-pill-btn.is-selected {
+  background: var(--sketch-blue);
+  border-color: var(--sketch-blue);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 2px 2px 0px var(--sketch-ink);
+}
+
+/* Flowchart Steps Row */
+.hand-flowchart-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+}
+
+.hand-node-box {
+  flex: 1;
+  min-width: 170px;
+  background: #ffffff;
+  border: 1.5px solid var(--sketch-ink);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.node-step {
+  font-size: 0.68rem;
+  color: var(--sketch-ink-faint);
+}
+
+.node-title {
+  font-family: var(--font-sketch-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--sketch-ink);
+}
+
+.node-reading {
+  font-family: var(--font-sketch-mono);
+  font-size: 0.75rem;
+  color: var(--sketch-ink-muted);
+  line-height: 1.4;
+}
+
+.hand-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decision Nodes */
+.node-decision {
+  min-width: 220px;
+  background: #ffffff;
+}
+
+.hand-decision-normal {
+  border-color: #00875a;
+  box-shadow: 2px 2px 0px #00875a;
+}
+
+.hand-decision-normal .decision-stamp {
+  color: #00875a;
+}
+
+.hand-decision-caution {
+  border-color: #e67e22;
+  box-shadow: 2px 2px 0px #e67e22;
+}
+
+.hand-decision-caution .decision-stamp {
+  color: #e67e22;
+}
+
+.hand-decision-danger {
+  border-color: #d93829;
+  box-shadow: 2px 2px 0px #d93829;
+}
+
+.hand-decision-danger .decision-stamp {
+  color: #d93829;
+}
+
+.decision-stamp {
+  font-family: var(--font-sketch-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.sketch-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.sketch-bar-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 38px;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+}
+
+.bar-lbl {
+  font-family: var(--font-sketch-mono);
+}
+
+.bar-track-sketch {
+  height: 4px;
+  background: #e5e0d5;
+  border-radius: 2px;
+}
+
+.bar-fill-sketch {
+  height: 100%;
+  background: var(--sketch-blue);
+  border-radius: 2px;
+}
+
+.hand-disclaimer {
+  font-size: 0.68rem;
+  color: var(--sketch-ink-faint);
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--sketch-ink-faint);
+}
+
+/* Footer Grid */
+.study-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr 1fr;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1.25px dashed var(--sketch-ink-faint);
+  align-items: start;
+}
+
+.study-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.study-meta-value {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--sketch-ink);
+}
+
+.study-action-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  .study-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .study-action-col {
+    justify-content: flex-start;
+  }
+}

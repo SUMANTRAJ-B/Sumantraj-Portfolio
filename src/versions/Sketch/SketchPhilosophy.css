@@ -1,0 +1,127 @@
+.sketch-philosophy-section {
+  padding: 6rem 0;
+  border-top: 1.5px solid var(--sketch-ink);
+  background-color: var(--sketch-bg);
+}
+
+.sketch-notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+}
+
+.philosophy-card,
+.interests-card {
+  padding: 2.5rem;
+  background-color: var(--sketch-card-bg);
+  border: 1.5px solid var(--sketch-ink);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 4px 4px 0px var(--sketch-ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.philosophy-handwritten-block {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(240, 235, 222, 0.55);
+  border: 1.25px dashed var(--sketch-ink-faint);
+  border-radius: 4px;
+}
+
+.philosophy-big-quote {
+  font-family: var(--font-sketch-hand);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  color: var(--sketch-ink);
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.philosophy-body-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--sketch-ink-muted);
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.philosophy-footer-annotation {
+  padding-top: 1rem;
+  border-top: 1px dashed var(--sketch-ink-faint);
+}
+
+.interests-lead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--sketch-ink-muted);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.interests-sketches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.interest-sketch-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--sketch-ink-faint);
+}
+
+.interest-sketch-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.interest-doodle {
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.interest-details {
+  flex: 1;
+}
+
+.interest-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.interest-name {
+  font-family: var(--font-sketch-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sketch-ink);
+}
+
+.interest-note {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--sketch-ink-muted);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 860px) {
+  .sketch-notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-card,
+  .interests-card {
+    padding: 2rem 1.25rem;
+  }
+}

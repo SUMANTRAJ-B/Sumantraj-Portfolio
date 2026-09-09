@@ -1,0 +1,96 @@
+.editorial-notes-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.notes-two-col-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.notes-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-label {
+  color: var(--text-dim);
+  margin-bottom: var(--space-4);
+}
+
+.philosophy-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-white);
+  line-height: 1.15;
+  margin-bottom: var(--space-6);
+  border-left: 2px solid var(--accent-cyan);
+  padding-left: var(--space-4);
+}
+
+.philosophy-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 620px;
+}
+
+.life-intro {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.interests-pills-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.life-item-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.life-bullet {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.life-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.life-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.life-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 860px) {
+  .notes-two-col-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}

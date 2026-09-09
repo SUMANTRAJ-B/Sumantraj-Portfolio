@@ -1,0 +1,97 @@
+.editorial-story-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.story-chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.story-chapter-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  background: var(--bg-subtle);
+  border: 1px solid var(--line-hairline);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.story-chapter-card:hover {
+  border-color: var(--line-subtle);
+  transform: translateY(-2px);
+}
+
+.chapter-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.chapter-marker {
+  color: var(--accent-cyan);
+}
+
+.chapter-tag {
+  color: var(--text-dim);
+}
+
+.chapter-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.chapter-text {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Motivation Callout */
+.story-motivation-callout {
+  padding: var(--space-10) var(--space-8);
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--line-hairline);
+  border-left: 2px solid var(--accent-cyan);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 900px;
+}
+
+.callout-label {
+  color: var(--accent-cyan);
+}
+
+.motivation-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.motivation-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 860px) {
+  .story-chapters-grid {
+    grid-template-columns: 1fr;
+  }
+}

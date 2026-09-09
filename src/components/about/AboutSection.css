@@ -1,0 +1,169 @@
+.editorial-about-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.editorial-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-statement-wrap {
+  margin-bottom: var(--space-16);
+  max-width: 1040px;
+}
+
+.about-statement-text {
+  font-size: clamp(2rem, 4.8vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  color: var(--text-primary);
+}
+
+.accent-word {
+  color: var(--text-white);
+  text-decoration: underline;
+  text-decoration-color: var(--line-contrast);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color var(--transition-fast);
+}
+
+.accent-word:hover {
+  text-decoration-color: var(--accent-cyan);
+}
+
+/* Details Grid */
+.about-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--line-hairline);
+}
+
+.about-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-meta {
+  margin-bottom: var(--space-3);
+  color: var(--text-muted);
+}
+
+.col-spacer {
+  margin-top: var(--space-8);
+}
+
+.col-value-primary {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.col-value-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  margin-top: var(--space-1);
+}
+
+.col-spacer-sm {
+  margin-top: var(--space-4);
+}
+
+.education-entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.edu-institution {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.edu-tag {
+  color: var(--accent-cyan);
+  font-size: 0.72rem;
+  margin-top: var(--space-1);
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.edu-details {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.target-roles-list,
+.interests-editorial-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.target-roles-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.role-bullet {
+  color: var(--accent-cyan);
+}
+
+.interest-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.interest-item:hover {
+  color: var(--text-white);
+}
+
+.interest-bullet {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.col-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 860px) {
+  .about-details-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

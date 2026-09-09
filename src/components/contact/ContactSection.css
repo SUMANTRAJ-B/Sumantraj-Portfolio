@@ -1,0 +1,173 @@
+.contact-editorial-section {
+  position: relative;
+  padding: var(--space-24) var(--container-pad) var(--space-12);
+  border-top: 1px solid var(--line-hairline);
+  background-color: var(--bg-black);
+  z-index: 2;
+}
+
+.contact-main {
+  padding: var(--space-16) 0 var(--space-20);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-eyebrow {
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.contact-headline {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-white);
+  margin-bottom: var(--space-10);
+}
+
+/* Big Direct Email Link */
+.contact-email-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2.75rem);
+  font-weight: 600;
+  color: var(--accent-cyan);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-12);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  word-break: break-all;
+}
+
+.contact-email-link:hover {
+  opacity: 0.85;
+  transform: translateX(4px);
+}
+
+.email-arrow {
+  font-size: 0.8em;
+  transition: transform var(--transition-fast);
+}
+
+.contact-email-link:hover .email-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Secondary Resume Row */
+.contact-resume-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.contact-resume-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.contact-resume-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-cyan);
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.contact-resume-link:hover {
+  opacity: 0.85;
+  color: var(--text-white);
+}
+
+/* Details Row */
+.contact-details-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.contact-links-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.contact-social-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.contact-social-link:hover {
+  color: var(--accent-cyan);
+}
+
+.contact-loc {
+  color: var(--text-dim);
+}
+
+/* Bottom Bar */
+.contact-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-12);
+  margin-top: var(--space-12);
+  border-top: 1px solid var(--line-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.bottom-brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.brand-role {
+  color: var(--text-dim);
+  font-size: 0.7rem;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.back-to-top:hover {
+  color: var(--accent-cyan);
+}
+
+@media (max-width: 640px) {
+  .contact-details-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

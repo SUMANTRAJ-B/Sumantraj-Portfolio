@@ -1,0 +1,296 @@
+.project-experience-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-8);
+  margin-bottom: var(--space-12);
+  position: relative;
+}
+
+.project-header {
+  margin-bottom: var(--space-8);
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.sim-badge {
+  color: var(--accent-cyan);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.project-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin-bottom: var(--space-6);
+}
+
+.project-provenance {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-6);
+}
+
+.provenance-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.provenance-text {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.project-tech-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.project-repo-link {
+  margin-left: auto;
+  color: var(--accent-cyan);
+  transition: color var(--transition-fast);
+}
+
+.project-repo-link:hover {
+  text-decoration: underline;
+}
+
+/* Interactive Pipeline Visualizer */
+.pipeline-experience {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.pipeline-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.scenario-btn-group {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.scenario-btn {
+  padding: 0.45rem 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.scenario-btn:hover {
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.scenario-btn.is-active {
+  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+}
+
+/* Flow Diagram */
+.pipeline-flow-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+}
+
+.pipeline-stage {
+  flex: 1;
+  min-width: 170px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3);
+  transition: border-color var(--transition-fast);
+}
+
+.pipeline-stage:hover {
+  border-color: var(--border-subtle);
+}
+
+.stage-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: var(--space-2);
+}
+
+.stage-name {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stage-payload {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.telemetry-line {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.telemetry-line .param {
+  color: var(--text-dim);
+}
+
+.telemetry-line .val {
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.detail-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.payload-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.code-sub {
+  word-break: break-all;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.pipeline-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  padding: 0 var(--space-1);
+}
+
+.signal-arrow {
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+}
+
+/* Decision Stage */
+.stage-decision {
+  min-width: 200px;
+}
+
+.stage-decision.status-normal {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.stage-decision.status-normal .decision-banner {
+  color: var(--status-nominal);
+}
+
+.stage-decision.status-caution {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.03);
+}
+
+.stage-decision.status-caution .decision-banner {
+  color: var(--status-caution);
+}
+
+.stage-decision.status-danger {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.stage-decision.status-danger .decision-banner {
+  color: var(--status-danger);
+}
+
+.risk-score {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.decision-banner {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.decision-summary {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-top: var(--space-2);
+}
+
+.pipeline-disclaimer {
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(255, 255, 255, 0.015);
+  border-radius: var(--radius-xs);
+  text-align: center;
+}
+
+.pipeline-disclaimer .mono-label {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .project-provenance {
+    grid-template-columns: 1fr;
+  }
+}

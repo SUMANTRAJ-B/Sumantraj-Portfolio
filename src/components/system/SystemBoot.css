@@ -1,0 +1,103 @@
+.boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-void);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  transition: opacity 250ms cubic-bezier(0.16, 1, 0.3, 1), visibility 250ms;
+}
+
+.boot-overlay.is-fading {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.boot-terminal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  font-family: var(--font-mono);
+}
+
+.boot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.boot-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.boot-skip-btn {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.boot-skip-btn:hover {
+  color: var(--accent-cyan);
+  border-color: var(--border-accent);
+}
+
+.boot-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.boot-line {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.boot-line.prefix {
+  color: var(--text-dim);
+  margin-bottom: var(--space-2);
+}
+
+.boot-line.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.boot-line.item.is-pending {
+  color: var(--text-dim);
+}
+
+.boot-line.item.is-ready {
+  color: var(--text-primary);
+}
+
+.boot-line.item.is-ready .item-status {
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.boot-line.complete {
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-hairline);
+  color: var(--status-nominal);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
