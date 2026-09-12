@@ -41,10 +41,10 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  // Render Version 2 when on /sketch, otherwise render Version 1 (Frozen current portfolio)
+  // Render Version 1 (Previous editorial portfolio) when on /sketch, otherwise render Version 2 (Sketch Portfolio as primary)
   if (currentRoute === '/sketch') {
-    return <SketchPortfolio onNavigate={navigateTo} />;
+    return <CurrentPortfolio onNavigate={navigateTo} />;
   }
 
-  return <CurrentPortfolio onNavigate={navigateTo} />;
+  return <SketchPortfolio onNavigate={navigateTo} />;
 }

@@ -15,12 +15,12 @@ export default function SketchNav({ onNavigate }) {
     { label: 'CONTACT', href: '#sketch-contact' },
   ];
 
-  const handleSwitchToDark = (e) => {
+  const handleSwitchToOther = (e) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate('/');
+      onNavigate('/sketch');
     } else {
-      window.history.pushState({}, '', '/');
+      window.history.pushState({}, '', '/sketch');
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   };
@@ -54,10 +54,10 @@ export default function SketchNav({ onNavigate }) {
         {/* Switch Link & Mobile Trigger */}
         <div className="sketch-nav-right">
           <a
-            href="/"
-            onClick={handleSwitchToDark}
+            href="/sketch"
+            onClick={handleSwitchToOther}
             className="sketch-other-version-btn desktop-only"
-            aria-label="Switch back to editorial dark version"
+            aria-label="View other version of portfolio"
           >
             <span>VIEW OTHER VERSION</span>
             <span className="sketch-arrow">↗</span>
@@ -92,10 +92,10 @@ export default function SketchNav({ onNavigate }) {
             ))}
             <li>
               <a
-                href="/"
+                href="/sketch"
                 onClick={(e) => {
                   setMobileOpen(false);
-                  handleSwitchToDark(e);
+                  handleSwitchToOther(e);
                 }}
                 className="sketch-mobile-item switch-item"
               >

@@ -51,13 +51,16 @@
 
 .sketch-hero-name {
   font-family: var(--font-sketch-display);
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-size: clamp(1.85rem, 4.4vw, 4.4rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
   color: var(--sketch-ink);
   margin-bottom: 1.25rem;
   text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .sketch-hero-statement {
@@ -212,7 +215,7 @@
 /* Mounted Portrait Photo Card */
 .sketch-photo-mount {
   width: 100%;
-  max-width: 290px;
+  max-width: 300px;
   background: #ffffff;
   border: 1.5px solid var(--sketch-ink);
   border-radius: 4px;
@@ -263,6 +266,12 @@
   margin-top: 8px;
   padding-top: 4px;
   border-top: 1px dashed var(--sketch-ink-faint);
+  gap: 0.5rem;
+}
+
+.photo-caption-row .hand-note {
+  white-space: nowrap;
+  font-size: 1.05rem;
 }
 
 /* Canvas Board for Schematic */
@@ -305,6 +314,9 @@
 }
 
 @media (max-width: 900px) {
+  .sketch-hero-name {
+    font-size: clamp(2rem, 7vw, 3.8rem);
+  }
   .sketch-hero-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -322,5 +334,17 @@
   .sketch-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sketch-hero-name {
+    font-size: clamp(1.6rem, 7.5vw, 2.2rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .sketch-hero-name {
+    font-size: 1.4rem;
   }
 }

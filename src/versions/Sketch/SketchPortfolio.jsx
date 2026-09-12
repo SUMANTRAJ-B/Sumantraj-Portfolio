@@ -22,27 +22,26 @@ export default function SketchPortfolio({ onNavigate }) {
     };
   }, []);
 
-  const handleSwitchToDark = (e) => {
+  const handleSwitchToOther = (e) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate('/');
+      onNavigate('/sketch');
     } else {
-      window.history.pushState({}, '', '/');
+      window.history.pushState({}, '', '/sketch');
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   };
 
   return (
     <div className="sketch-portfolio-root">
-      {/* Subtle Floating Switcher back to Version 1 */}
+      {/* Subtle Floating Switcher to Other Version */}
       <div className="sketch-version-switch">
         <a
-          href="/"
-          onClick={handleSwitchToDark}
+          href="/sketch"
+          onClick={handleSwitchToOther}
           className="sketch-switch-link"
-          aria-label="Switch back to editorial dark version"
+          aria-label="Switch to previous editorial version"
         >
-          <span className="hand-note" style={{ color: '#0055d4' }}>[V1]</span>
           <span>VIEW OTHER VERSION</span>
           <span>↗</span>
         </a>

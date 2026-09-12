@@ -3,12 +3,12 @@ import { personalData } from '../../data/portfolioData';
 import './SketchContact.css';
 
 export default function SketchContact({ onNavigate }) {
-  const handleSwitchToDark = (e) => {
+  const handleSwitchToOther = (e) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate('/');
+      onNavigate('/sketch');
     } else {
-      window.history.pushState({}, '', '/');
+      window.history.pushState({}, '', '/sketch');
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   };
@@ -98,11 +98,12 @@ export default function SketchContact({ onNavigate }) {
 
             <div className="contact-switch-option">
               <a
-                href="/"
-                onClick={handleSwitchToDark}
+                href="/sketch"
+                onClick={handleSwitchToOther}
                 className="sketch-other-version-btn"
+                aria-label="View other version of portfolio"
               >
-                <span>SWITCH TO EDITORIAL DARK PORTFOLIO</span>
+                <span>VIEW OTHER VERSION</span>
                 <span>↗</span>
               </a>
             </div>

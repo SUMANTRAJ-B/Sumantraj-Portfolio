@@ -12,28 +12,27 @@ import ContactSection from '../../components/contact/ContactSection';
 import './CurrentPortfolio.css';
 
 export default function CurrentPortfolio({ onNavigate }) {
-  const handleSwitchToSketch = (e) => {
+  const handleSwitchToMain = (e) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate('/sketch');
+      onNavigate('/');
     } else {
-      window.history.pushState({}, '', '/sketch');
+      window.history.pushState({}, '', '/');
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   };
 
   return (
     <div className="current-portfolio-root">
-      {/* Subtle Switch to Sketch Version Banner / Badge */}
+      {/* Subtle Switch to Other Version Banner */}
       <div className="version-switch-banner">
         <a
-          href="/sketch"
-          onClick={handleSwitchToSketch}
+          href="/"
+          onClick={handleSwitchToMain}
           className="version-switch-link"
-          aria-label="Switch to hand-drawn sketch version of portfolio"
+          aria-label="Switch to main version of portfolio"
         >
-          <span className="switch-tag">[ V2 ]</span>
-          <span className="switch-text">EXPLORE SKETCH VERSION</span>
+          <span className="switch-text">VIEW OTHER VERSION</span>
           <span className="switch-arrow">↗</span>
         </a>
       </div>
